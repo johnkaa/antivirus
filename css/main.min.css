@@ -1,0 +1,363 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+* ::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+* ::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: #fff;
+}
+* ::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  box-shadow: inset 0 0 6px rgba(36, 35, 51, 0.3);
+  background-color: #242333;
+}
+
+.header {
+  background-color: #000000;
+  color: #fff;
+  padding: 12px 0 8px 0;
+  font-weight: 500;
+}
+.header__inner {
+  display: flex;
+  align-items: center;
+}
+.header__logo {
+  padding-right: 10px;
+  margin-right: 12px;
+  position: relative;
+}
+.header__logo::after {
+  content: "";
+  height: 30px;
+  width: 1px;
+  background-color: #fff;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media (max-width: 575px) {
+  .header__logo::after {
+    height: 25px;
+  }
+}
+.header__name {
+  font-size: 21px;
+  line-height: 29px;
+}
+@media (max-width: 575px) {
+  .header__name {
+    font-size: 18px;
+  }
+}
+.header__name-tm {
+  font-family: "Opens Sans", sans-serif;
+  font-weight: 300;
+}
+
+.footer {
+  background-color: #000000;
+  color: #fff;
+  padding: 10px 0 8px 0;
+}
+.footer__copyright {
+  font-size: 14px;
+  line-height: 27px;
+}
+
+.main {
+  padding-top: 150px;
+  padding-bottom: 50px;
+}
+@media (max-width: 991px) {
+  .main {
+    padding-top: 100px;
+  }
+}
+@media (max-width: 767px) {
+  .main {
+    padding-top: 50px;
+  }
+}
+.main__title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 48px;
+  line-height: 100%;
+  text-align: center;
+  margin-bottom: 106px;
+}
+@media (max-width: 767px) {
+  .main__title {
+    font-size: 32px;
+    margin-bottom: 80px;
+  }
+}
+.main__subscriptions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+@media (max-width: 991px) {
+  .main__subscriptions {
+    grid-row-gap: 80px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 767px) {
+  .main__subscriptions {
+    grid-template-columns: 1fr;
+  }
+}
+.main .subscription {
+  position: relative;
+  background-color: #F3F5F6;
+  padding: 71px 0 25px 0;
+}
+.main .subscription__value {
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+  background-color: #fff;
+  width: 66.6%;
+  height: 100px;
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main .subscription__best {
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 500;
+  background-color: #FFB800;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 4px 12px;
+}
+.main .subscription__discount {
+  color: #fff;
+  position: absolute;
+  left: -14px;
+  top: -14px;
+  width: 100px;
+  height: 101px;
+  background-image: url("/images/icons/discount.svg");
+}
+.main .subscription__discount-amount {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  transform: rotate(-45deg);
+  letter-spacing: 0.05rem;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+}
+.main .subscription__discount-text {
+  position: absolute;
+  top: 30px;
+  left: 27px;
+  transform: rotate(-45deg);
+}
+.main .subscription__price {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+.main .subscription__price-amount {
+  font-size: 48px;
+}
+.main .subscription__price-period {
+  font-size: 18px;
+}
+.main .subscription__old-price {
+  text-align: center;
+  color: #929292;
+  transform: translateY(-8px);
+}
+.main .subscription__title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+}
+.main .subscription__terms {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.main .subscription__button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: 189px;
+  width: 100%;
+  margin: 0 auto;
+  color: #fff;
+  border-radius: 32px;
+  padding: 11px;
+  transition: background 0.3s;
+  position: relative;
+}
+.main .subscription__button::before, .main .subscription__button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 32px;
+  transition: opacity 0.3s;
+}
+.main .subscription__button::before {
+  background: linear-gradient(0deg, rgb(19, 9, 153) 0%, rgb(23, 77, 143) 35%, rgb(26, 127, 135) 60%, rgb(28, 158, 131) 87%, rgb(29, 170, 129) 100%);
+}
+.main .subscription__button::after {
+  background: linear-gradient(180deg, rgb(19, 9, 153) 0%, rgb(23, 77, 143) 35%, rgb(26, 127, 135) 60%, rgb(28, 158, 131) 87%, rgb(29, 170, 129) 100%);
+  opacity: 0;
+}
+.main .subscription__button:hover::before {
+  opacity: 0;
+}
+.main .subscription__button:hover::after {
+  opacity: 1;
+}
+.main .subscription__button-text, .main .subscription__button-icon {
+  z-index: 2;
+}
+.main .subscription__button-text {
+  font-size: 18px;
+  font-weight: 500;
+  margin-right: 10px;
+}
+.main .download-alert {
+  display: none;
+  background-color: #3683F7;
+  color: #fff;
+  position: absolute;
+  z-index: 2;
+  top: 56px;
+  right: 12px;
+  text-align: center;
+  padding: 12px 24px 32px;
+  width: 160px;
+  animation: download-alert-animation 1s infinite alternate;
+}
+.main .download-alert::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 80px solid transparent;
+  border-right: 80px solid transparent;
+  border-bottom: 52px solid #3683F7;
+  position: absolute;
+  left: 0;
+  top: -52px;
+}
+.main .download-alert.chrome {
+  bottom: 56px;
+  left: 12px;
+  top: unset;
+  right: unset;
+}
+.main .download-alert.chrome::before {
+  bottom: -52px;
+  top: unset;
+  border-top: 52px solid #3683F7;
+  border-bottom: none;
+}
+.main .download-alert.shown {
+  display: block;
+}
+@media (max-width: 767px) {
+  .main .download-alert {
+    right: 10px;
+    top: unset;
+    bottom: 56px;
+  }
+  .main .download-alert::before {
+    bottom: -52px;
+    top: unset;
+    border-top: 52px solid #3683F7;
+    border-bottom: none;
+  }
+}
+.main .download-alert__title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 72px;
+  font-weight: 700;
+}
+.main .download-alert__text {
+  font-size: 12px;
+}
+
+@keyframes download-alert-animation {
+  0% {
+    transform: translate3d(0, -10px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+html, body {
+  height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: Roboto, sans-serif;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.main {
+  position: relative;
+  flex: 1 1 auto;
+}
+
+.logo {
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 25px;
+  color: #FFB800;
+}
+@media (max-width: 575px) {
+  .logo {
+    font-size: 18px;
+  }
+}
+/*# sourceMappingURL=main.min.css.map */
