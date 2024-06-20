@@ -191,9 +191,9 @@
 		display: none;
 		background-color: #3683F7;
 		color: #fff;
-		position: absolute;
+		position: fixed;
 		z-index: 2;
-		top: 56px;
+		top: 105px;
 		right: 12px;
 		text-align: center;
 		padding: 12px 24px 32px;
@@ -213,7 +213,7 @@
 		}
 
 		&.chrome {
-			bottom: 56px;
+			bottom: 105px;
 			left: 12px;
 			top: unset;
 			right: unset;
@@ -228,19 +228,6 @@
 
 		&.shown {
 			display: block;
-		}
-
-		@include media-breakpoint-down(sm) {
-			right: 10px;
-			top: unset;
-			bottom: 56px;
-
-			&::before {
-				bottom: -52px;
-				top: unset;
-				border-top: 52px solid #3683F7;
-				border-bottom: none;
-			}
 		}
 
 		&__title {
