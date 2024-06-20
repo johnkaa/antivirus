@@ -1,0 +1,48 @@
+@import "../config/media-breakpoints";
+
+.header {
+	background-color: #000000;
+	color: #fff;
+	padding: 12px 0 8px 0;
+	font-weight: 500;
+
+	&__inner {
+		display: flex;
+		align-items: center;
+	}
+
+	&__logo {
+		padding-right: 10px;
+		margin-right: 12px;
+		position: relative;
+
+		&::after {
+			content: '';
+			height: 30px;
+			width: 1px;
+			background-color: #fff;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+
+			@include media-breakpoint-down(xs) {
+				height: 25px;
+			}
+		}
+	}
+
+	&__name {
+		font-size: 21px;
+		line-height: 29px;
+
+		@include media-breakpoint-down(xs) {
+			font-size: 18px;
+		}
+	}
+
+	&__name-tm {
+		font-family: 'Opens Sans', sans-serif;
+		font-weight: 300;
+	}
+}

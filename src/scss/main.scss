@@ -1,0 +1,41 @@
+@import "./config/reset";
+@import "./config/scrollbar";
+@import "./config/media-breakpoints";
+@import "components/index";
+
+html, body {
+	height: 100%;
+}
+
+body {
+	overflow-x: hidden;
+	font-family: Roboto, sans-serif;
+}
+
+.container {
+	max-width: 1170px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+.main {
+	position: relative;
+	flex: 1 1 auto;
+}
+
+.logo {
+	font-weight: 500;
+	font-size: 21px;
+	line-height: 25px;
+	color: #FFB800;
+
+	@include media-breakpoint-down(xs) {
+		font-size: 18px;
+	}
+}
