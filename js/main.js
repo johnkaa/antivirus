@@ -47,7 +47,7 @@ function addSubscription(subscription) {
 			<a class="subscription__download" href="${subscription.link}" download="${subscription.name_display}">
 				<button class="subscription__button">
 					<span class="subscription__button-text">DOWNLOAD</span>
-					<img class="subscription__button-icon" src="../images/icons/download.svg" width="30" height="30" alt="Download">
+					<img class="subscription__button-icon" src="./images/icons/download.svg" width="30" height="30" alt="Download">
 				</button>
 			</a>
   		</div>
